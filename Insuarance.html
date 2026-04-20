@@ -1,0 +1,308 @@
+le<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Company</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background-color: #0077b6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header nav {
+            margin-top: 10px;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffb703;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #fb8500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .whatsapp-btn {
+            padding: 15px 30px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #25D366;
+            color: white;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1DA851;
+        }
+
+        .whatsapp-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #0077b6;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .feature {
+            background-color: #f0f0f0;
+            padding: 20px;
+            flex: 1 1 250px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature h3 {
+            margin-bottom: 15px;
+            color: #023047;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, 
+        .contact-form textarea, 
+        .contact-form button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #005f8a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #023047;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Insurance Company</h1>
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Your Trusted Insurance Partner</h1>
+    <p>Protecting what matters most – health, life, home, and vehicles</p>
+    <div class="hero-buttons">
+        <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Get a Quote</button>
+        <a href="https://wa.me/15551726721" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Buy on WhatsApp
+        </a>
+    </div>
+</section>
+
+<section id="features">
+    <h2>Our Insurance Services</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>Health Insurance</h3>
+            <p>Comprehensive health coverage for you and your family, with flexible plans and easy claims.</p>
+        </div>
+        <div class="feature">
+            <h3>Life Insurance</h3>
+            <p>Secure your loved ones’ future with our reliable life insurance policies.</p>
+        </div>
+        <div class="feature">
+            <h3>Motor Insurance</h3>
+            <p>Protect your vehicle from accidents, theft, and damages with full coverage options.</p>
+        </div>
+        <div class="feature">
+            <h3>Home Insurance</h3>
+            <p>Keep your home and possessions safe with policies designed to cover risks and damages.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+        Insurance Company is committed to providing reliable and affordable insurance solutions to protect you, your family, and your assets. Our team of experienced professionals ensures that your claims are handled quickly and fairly.
+    </p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2026 Insurance Company. All rights reserved.
+</footer>
+
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.production.min.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+></script>
+
+<!-- Load Caava AI Widget from CDN -->
+<script
+  src="https://unpkg.com/@caava-ai/widget@0.1.2/dist/widget.full.js.umd.js"
+  async
+  type="text/javascript"
+></script>
+
+<!-- Floating Widget -->
+<ai-assistant-widget
+  floating="true"
+  position="bottom-right"
+  button-size="medium"
+  button-icon="💬"
+  button-text="Chat with Last Expense - Anna"
+  name="Last Expense - Anna"
+  assistant-id="75b98ead-6740-4283-b6e5-e29c149787d3"
+  api-url="http://caava.192.0.0.123.nip.io/akili/proj_75b98ead/web"
+  api-key="pk-akv1_JH4OXPiebf3-rRIsXh8xEGCGs52nKKpKKk8Ekoc3VcY"
+  enable-file-upload="true"
+  
+>
+</ai-assistant-widget>
+
+
+</body>
+</html>
