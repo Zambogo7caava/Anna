@@ -16,11 +16,15 @@ le<!DOCTYPE html>
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
+            width: 100vw;
+            overflow-x: hidden;
         }
 
         a {
             text-decoration: none;
             color: inherit;
+            width: 100vw;
+            overflow-x: hidden;
         }
 
         /* Header */
@@ -43,8 +47,17 @@ le<!DOCTYPE html>
 
         /* Hero Section */
         .hero {
-            background: url('https://images.unsplash.com/photo-1761839257664-ecba169506c1?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-            height: 90vh;
+            position: relative;
+            background: url('image.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 90vh;
+            width: 100vw;
+            min-width: 100vw;
+            margin: 0;
+            left: 0;
+            right: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -52,56 +65,90 @@ le<!DOCTYPE html>
             color: white;
             text-align: center;
             padding: 0 20px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 47, 73, 0.55);
+            z-index: 1;
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
         }
 
         .hero button {
-            padding: 15px 30px;
-            font-size: 1rem;
+            padding: 15px 35px;
+            font-size: 1.1rem;
             border: none;
-            border-radius: 5px;
-            background-color: #ffb703;
-            color: #333;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #ffb703 60%, #fb8500 100%);
+            color: #222;
+            font-weight: 600;
             cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            transition: background 0.2s, transform 0.2s;
+            margin-bottom: 5px;
         }
 
         .hero button:hover {
-            background-color: #fb8500;
+            background: linear-gradient(90deg, #fb8500 60%, #ffb703 100%);
+            transform: translateY(-2px) scale(1.04);
         }
 
         .hero-buttons {
             display: flex;
-            gap: 15px;
+            gap: 18px;
             flex-wrap: wrap;
             justify-content: center;
+            align-items: center;
+            margin-top: 10px;
         }
 
         .whatsapp-btn {
-            padding: 15px 30px;
-            font-size: 1rem;
+            padding: 15px 35px;
+            font-size: 1.1rem;
             border: none;
-            border-radius: 5px;
-            background-color: #25D366;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #25D366 60%, #128C7E 100%);
             color: white;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            font-weight: 600;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            transition: background 0.2s, transform 0.2s;
+            max-width: 250px;
+            min-width: 180px;
+            justify-content: center;
+            white-space: nowrap;
         }
 
         .whatsapp-btn:hover {
-            background-color: #1DA851;
+            background: linear-gradient(90deg, #128C7E 60%, #25D366 100%);
+            transform: translateY(-2px) scale(1.04);
         }
 
         .whatsapp-btn svg {
@@ -192,13 +239,20 @@ le<!DOCTYPE html>
                 flex-direction: column;
                 align-items: center;
             }
-
             .hero h1 {
                 font-size: 2rem;
             }
-
             .hero p {
                 font-size: 1rem;
+            }
+            .hero button, .whatsapp-btn {
+                width: 100%;
+                padding: 14px 0;
+                font-size: 1rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
             }
         }
     </style>
